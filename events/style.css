@@ -1,0 +1,52 @@
+* {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+p {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-200px) scale(0);
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+.mouse-event {
+  border: 4px solid plum;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+.theme-container {
+  position: fixed;
+  top: 10px;
+}
+.theme {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+#dark {
+  background: black;
+}
+#salmon {
+  background: salmon;
+}
+#teal {
+  background: teal;
+}
+.dark-theme {
+  background: black;
+  color: white;
+}
+.salmon-theme {
+  background: salmon;
+}
+.teal-theme {
+  background: teal;
+}
