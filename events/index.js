@@ -5,6 +5,7 @@ const x = document.querySelector(".horizontal");
 const y = document.querySelector(".vertical");
 const inputQuestion = document.querySelector("#question");
 const reponseDisplay = document.querySelector(".reponse");
+const themeButtons = document.querySelectorAll(".theme");
 
 // CLICK
 // event listener : 1er param : événement(scroll, keyup) / 2ème : action
@@ -23,4 +24,21 @@ mouseEvent.addEventListener("mousemove", (event) => {
 // INPUT EVENT
 inputQuestion.addEventListener("input", (event) => {
   reponseDisplay.innerHTML = event.target.value;
+});
+
+// SWITCH
+themeButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    console.log(event.target.id);
+
+    switch (event.target.id) {
+      case "dark":
+        document.body.classList.add("dark-theme");
+        break;
+
+      // toujours finir le switch par un default case
+      default:
+        null;
+    }
+  });
 });
